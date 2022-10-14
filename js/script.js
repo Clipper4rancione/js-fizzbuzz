@@ -6,7 +6,7 @@ const container = document.querySelector('.container');
 const limit = 100;
 const fizz = 'Fizz'
 const buzz = 'Buzz'
-
+const fizzBuzz = 'Fizz-Buzz'
 //STAMPA DEI NUMERI FINO A 100
 for (let i = 1; i <= limit; i++){
     //console.log(i);
@@ -20,7 +20,11 @@ for (let i = 1; i <= limit; i++){
     container.append(box);
 
     //creazione condizione if/else per stampare fizz
-    if(i % 3 === 0){
+    if(i % 15 === 0){
+        box.classList.add('light-pink');
+        box.innerHTML = fizzBuzz;
+    }
+    else if(i % 3 === 0){
         box.innerHTML = fizz;
         box.classList.add('ligh-blue');
     }else if(i % 5 === 0){
